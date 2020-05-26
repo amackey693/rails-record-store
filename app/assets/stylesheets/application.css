@@ -17,5 +17,20 @@
  body {
    background-color: plum;
    font-family: monospace;
-   padding: 50px;
+ }
+
+ .box {
+    padding: 50px;
+    margin: 25%;
+    border: 2px solid black;
+    border-radius: 8px ;
+    background-color: paleturquoise;
+ }
+
+ h1, h2 {
+   text-align: center;
+ }
+
+ footer {
+   text-align: center;
  }
