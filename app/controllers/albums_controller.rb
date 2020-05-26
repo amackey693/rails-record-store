@@ -13,6 +13,7 @@ class AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
     if @album.save 
+      flash[:notice] = "Album Saved friendo!"
       redirect_to albums_path
     else
       render :new
@@ -40,8 +41,13 @@ end
 
 def destroy
   @album = Album.find(params[:id])
-  @album.destroy
-  redirect_to albums_path
+  if @album.destroy 
+    flash[:notice] = "You decided to DESTROY #{@album.name}"
+    redirect_to albums_path
+  else
+    flash[:notice] = "Probably for the best you didn't destroy that"
+    redirect_to albums_path
+  end
 end
 
   private 

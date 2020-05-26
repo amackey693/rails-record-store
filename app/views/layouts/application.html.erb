@@ -11,7 +11,11 @@
 
   <body>
     <div class ="box">
-    <%= yield %>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+
+      <%= yield %>
+
     </div>
   </body>
   <footer>Jozy and Allison 4 eva (c) 2020</footer>
