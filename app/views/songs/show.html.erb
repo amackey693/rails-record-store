@@ -2,7 +2,7 @@
 <h2> Album: <%= @album.name %></h2>
 <h3><%= @song.lyrics%></h3>
 
-<p><%= link_to "Edit song", edit_album_song_path(@album, @song)%></p>
+</p>
 <p><%= link_to "Delete song", album_song_path(@album, @song),
                           :data => {:confirm => "U sure bro?",
                                         :method => "delete"} %></p>
